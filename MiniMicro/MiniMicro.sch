@@ -1,0 +1,1627 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+5V #PWR0101
+U 1 1 62DA81D8
+P 5150 1700
+F 0 "#PWR0101" H 5150 1550 50  0001 C CNN
+F 1 "+5V" V 5165 1828 50  0000 L CNN
+F 2 "" H 5150 1700 50  0001 C CNN
+F 3 "" H 5150 1700 50  0001 C CNN
+	1    5150 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5350 1500 5250 1500
+Wire Wire Line
+	5350 1600 5250 1600
+Wire Wire Line
+	5250 1600 5250 1500
+Connection ~ 5250 1500
+Wire Wire Line
+	5250 1500 5150 1500
+$Comp
+L power:GND #PWR0102
+U 1 1 62DA0A15
+P 5150 1500
+F 0 "#PWR0102" H 5150 1250 50  0001 C CNN
+F 1 "GND" V 5155 1372 50  0000 R CNN
+F 2 "" H 5150 1500 50  0001 C CNN
+F 3 "" H 5150 1500 50  0001 C CNN
+	1    5150 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 1700 5350 1700
+Text Label 9300 900  2    50   ~ 0
+UDPI
+Wire Wire Line
+	9300 900  9400 900 
+$Comp
+L SamacSys_Parts:ATTINY3227-MU IC1
+U 1 1 62DBDB59
+P 5350 2150
+F 0 "IC1" H 6125 3365 50  0000 C CNN
+F 1 "ATTINY3227-MU" H 6125 3274 50  0000 C CNN
+F 2 "SamacSys_Parts:QFN50P400X400X90-25N-D" H 4650 4000 50  0001 L CNN
+F 3 "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATtiny3224-3226-3227-Data-Sheet-DS40002345B.pdf" H 4650 3900 50  0001 L CNN
+F 4 "8-bit Microcontrollers - MCU 20MHz, 32KB, VQFN24, Ind 85C, Green" H 4650 3800 50  0001 L CNN "Description"
+F 5 "0.9" H 4650 3700 50  0001 L CNN "Height"
+F 6 "579-ATTINY3227-MU" H 4650 3600 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology-Atmel/ATTINY3227-MU?qs=A6eO%252BMLsxmQn1FUbCnj%252BnQ%3D%3D" H 4650 3500 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Microchip" H 4650 3400 50  0001 L CNN "Manufacturer_Name"
+F 9 "ATTINY3227-MU" H 4650 3300 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5350 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J1
+U 1 1 62DC1F9F
+P 9600 1000
+F 0 "J1" H 9650 1317 50  0000 C CNN
+F 1 "UPDI" H 9650 1226 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 9600 1000 50  0001 C CNN
+F 3 "~" H 9600 1000 50  0001 C CNN
+	1    9600 1000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9900 1000
+NoConn ~ 9400 1000
+NoConn ~ 9400 1100
+Text Label 5250 1950 2    50   ~ 0
+UDPI
+Wire Wire Line
+	5250 1950 5350 1950
+Text Label 7000 2050 0    50   ~ 0
+I2C_SDA_5.0
+Wire Wire Line
+	7000 2050 6900 2050
+Text Label 7000 1950 0    50   ~ 0
+I2C_SCL_5.0
+Wire Wire Line
+	7000 1950 6900 1950
+Text Label 5250 2150 2    50   ~ 0
+SPI_MISO_5.0
+Wire Wire Line
+	5250 2150 5350 2150
+Text Label 5250 2050 2    50   ~ 0
+SPI_MOSI_5.0
+Wire Wire Line
+	5250 2050 5350 2050
+Text Label 5250 2250 2    50   ~ 0
+SPI_SCK_5.0
+Wire Wire Line
+	5250 2250 5350 2250
+Text Label 5250 2350 2    50   ~ 0
+SPI_CS_SD_5.0n
+Wire Wire Line
+	5250 2350 5350 2350
+$Comp
+L Connector_Generic:Conn_01x06 J4
+U 1 1 62DE2CC1
+P 8850 1800
+F 0 "J4" H 8930 1792 50  0000 L CNN
+F 1 "PC" H 8930 1701 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 8850 1800 50  0001 C CNN
+F 3 "~" H 8850 1800 50  0001 C CNN
+	1    8850 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J5
+U 1 1 62DE6BB6
+P 8850 2600
+F 0 "J5" H 8930 2592 50  0000 L CNN
+F 1 "PB" H 8930 2501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 8850 2600 50  0001 C CNN
+F 3 "~" H 8850 2600 50  0001 C CNN
+	1    8850 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J7
+U 1 1 62DE7CF5
+P 10000 2600
+F 0 "J7" H 10080 2592 50  0000 L CNN
+F 1 "PA" H 10080 2501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 10000 2600 50  0001 C CNN
+F 3 "~" H 10000 2600 50  0001 C CNN
+	1    10000 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 1700 6900 1700
+Wire Wire Line
+	7000 1600 6900 1600
+Text Label 7000 1500 0    50   ~ 0
+PC3-ALT-INT
+Wire Wire Line
+	7000 1500 6900 1500
+Text Label 7000 1400 0    50   ~ 0
+PC2
+Wire Wire Line
+	7000 1400 6900 1400
+Text Label 7000 1300 0    50   ~ 0
+PC1
+Wire Wire Line
+	7000 1300 6900 1300
+Text Label 7000 1200 0    50   ~ 0
+PC0
+Wire Wire Line
+	7000 1200 6900 1200
+Wire Wire Line
+	8550 2100 8650 2100
+Wire Wire Line
+	8550 2000 8650 2000
+Text Label 8550 1900 2    50   ~ 0
+PC3-ALT-INT
+Wire Wire Line
+	8550 1900 8650 1900
+Text Label 8550 1800 2    50   ~ 0
+PC2
+Wire Wire Line
+	8550 1800 8650 1800
+Text Label 8550 1700 2    50   ~ 0
+PC1
+Wire Wire Line
+	8550 1700 8650 1700
+Text Label 8550 1600 2    50   ~ 0
+PC0
+Wire Wire Line
+	8550 1600 8650 1600
+Text Label 7000 2650 0    50   ~ 0
+PB7
+Wire Wire Line
+	7000 2650 6900 2650
+Text Label 7000 2550 0    50   ~ 0
+PB6
+Wire Wire Line
+	7000 2550 6900 2550
+Text Label 7000 2450 0    50   ~ 0
+PB5
+Wire Wire Line
+	7000 2450 6900 2450
+Text Label 7000 2350 0    50   ~ 0
+PB4
+Wire Wire Line
+	7000 2350 6900 2350
+Text Label 7000 2250 0    50   ~ 0
+PB3
+Wire Wire Line
+	7000 2250 6900 2250
+Text Label 7000 2150 0    50   ~ 0
+PB2
+Wire Wire Line
+	7000 2150 6900 2150
+Text Label 8550 2900 2    50   ~ 0
+PB7
+Wire Wire Line
+	8550 2900 8650 2900
+Text Label 8550 2800 2    50   ~ 0
+PB6
+Wire Wire Line
+	8550 2800 8650 2800
+Text Label 8550 2700 2    50   ~ 0
+PB5
+Wire Wire Line
+	8550 2700 8650 2700
+Text Label 8550 2600 2    50   ~ 0
+PB4
+Wire Wire Line
+	8550 2600 8650 2600
+Text Label 8550 2500 2    50   ~ 0
+PB3
+Wire Wire Line
+	8550 2500 8650 2500
+Text Label 8550 2400 2    50   ~ 0
+PB2
+Wire Wire Line
+	8550 2400 8650 2400
+Text Label 5250 2450 2    50   ~ 0
+PA5
+Wire Wire Line
+	5250 2450 5350 2450
+Text Label 5250 2550 2    50   ~ 0
+PA6
+Wire Wire Line
+	5250 2550 5350 2550
+Text Label 5250 2650 2    50   ~ 0
+PA7
+Wire Wire Line
+	5250 2650 5350 2650
+Text Label 9700 2900 2    50   ~ 0
+PA5
+Wire Wire Line
+	9700 2700 9800 2700
+Text Label 9700 2800 2    50   ~ 0
+PA6
+Wire Wire Line
+	9700 2800 9800 2800
+Text Label 9700 2700 2    50   ~ 0
+PA7
+Wire Wire Line
+	9700 2900 9800 2900
+Text Label 9700 1600 2    50   ~ 0
+I2C_SDA_5.0
+Wire Wire Line
+	9700 1600 9800 1600
+Text Label 9700 1700 2    50   ~ 0
+I2C_SCL_5.0
+Wire Wire Line
+	9700 1700 9800 1700
+Text Label 9700 1900 2    50   ~ 0
+SPI_MISO_5.0
+Wire Wire Line
+	9700 1900 9800 1900
+Text Label 9700 2000 2    50   ~ 0
+SPI_MOSI_5.0
+Wire Wire Line
+	9700 1800 9800 1800
+Text Label 9700 1800 2    50   ~ 0
+SPI_SCK_5.0
+Wire Wire Line
+	9700 2000 9800 2000
+Text Label 9700 2100 2    50   ~ 0
+SPI_CS_SD_5.0n
+Wire Wire Line
+	9700 2100 9800 2100
+$Comp
+L power:+5V #PWR0107
+U 1 1 62DF88FA
+P 9800 2600
+F 0 "#PWR0107" H 9800 2450 50  0001 C CNN
+F 1 "+5V" V 9815 2728 50  0000 L CNN
+F 2 "" H 9800 2600 50  0001 C CNN
+F 3 "" H 9800 2600 50  0001 C CNN
+	1    9800 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 62DF8901
+P 9800 2500
+F 0 "#PWR0108" H 9800 2250 50  0001 C CNN
+F 1 "GND" V 9805 2372 50  0000 R CNN
+F 2 "" H 9800 2500 50  0001 C CNN
+F 3 "" H 9800 2500 50  0001 C CNN
+	1    9800 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 62DFCCAC
+P 9800 2400
+F 0 "#PWR0109" H 9800 2250 50  0001 C CNN
+F 1 "+3.3V" V 9815 2528 50  0000 L CNN
+F 2 "" H 9800 2400 50  0001 C CNN
+F 3 "" H 9800 2400 50  0001 C CNN
+	1    9800 2400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9250 4850 9250 4950
+Wire Wire Line
+	9250 4950 9350 4950
+Wire Wire Line
+	9550 4950 9550 4850
+Wire Wire Line
+	9350 4850 9350 4950
+Connection ~ 9350 4950
+Wire Wire Line
+	9350 4950 9450 4950
+Wire Wire Line
+	9450 4850 9450 4950
+Connection ~ 9450 4950
+Wire Wire Line
+	9450 4950 9550 4950
+Wire Wire Line
+	9550 4950 9550 5050
+Connection ~ 9550 4950
+$Comp
+L power:GND #PWR0103
+U 1 1 62DC5F7F
+P 9550 5050
+F 0 "#PWR0103" H 9550 4800 50  0001 C CNN
+F 1 "GND" H 9555 4877 50  0000 C CNN
+F 2 "" H 9550 5050 50  0001 C CNN
+F 3 "" H 9550 5050 50  0001 C CNN
+	1    9550 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 62DCA51C
+P 7950 3900
+F 0 "#PWR0104" H 7950 3650 50  0001 C CNN
+F 1 "GND" H 7955 3727 50  0000 C CNN
+F 2 "" H 7950 3900 50  0001 C CNN
+F 3 "" H 7950 3900 50  0001 C CNN
+	1    7950 3900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8750 4100
+NoConn ~ 8750 3400
+Wire Wire Line
+	5050 1000 5150 1000
+Wire Wire Line
+	5050 1150 4950 1150
+Wire Wire Line
+	5050 1000 5050 1150
+Wire Wire Line
+	4950 1000 5050 1000
+Wire Wire Line
+	4650 1000 4750 1000
+Connection ~ 4650 1000
+Wire Wire Line
+	4650 1150 4750 1150
+Wire Wire Line
+	4650 1000 4650 1150
+Wire Wire Line
+	4550 1000 4650 1000
+$Comp
+L Device:C_Small C7
+U 1 1 62DCE2AE
+P 4850 1150
+F 0 "C7" V 4621 1150 50  0000 C CNN
+F 1 "4.7nF" V 4712 1150 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 4850 1150 50  0001 C CNN
+F 3 "~" H 4850 1150 50  0001 C CNN
+	1    4850 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 62DC0987
+P 4850 1000
+F 0 "C1" V 4621 1000 50  0000 C CNN
+F 1 "100nF" V 4712 1000 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 4850 1000 50  0001 C CNN
+F 3 "~" H 4850 1000 50  0001 C CNN
+	1    4850 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 62DDBBE9
+P 2200 5100
+F 0 "#PWR0105" H 2200 4850 50  0001 C CNN
+F 1 "GND" H 2205 4927 50  0000 C CNN
+F 2 "" H 2200 5100 50  0001 C CNN
+F 3 "" H 2200 5100 50  0001 C CNN
+	1    2200 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4400 2200 4400
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 62DDBBF1
+P 2200 4400
+F 0 "#PWR0106" H 2200 4250 50  0001 C CNN
+F 1 "+3.3V" H 2215 4573 50  0000 C CNN
+F 2 "" H 2200 4400 50  0001 C CNN
+F 3 "" H 2200 4400 50  0001 C CNN
+	1    2200 4400
+	1    0    0    -1  
+$EndComp
+Text Label 2400 4800 2    50   ~ 0
+SPI_MOSI_5.0
+Text Label 2400 5000 2    50   ~ 0
+SPI_SCK_5.0
+Text Label 2400 4900 2    50   ~ 0
+SPI_SCK_3.3
+$Comp
+L SamacSys_Parts:CD74HC4050MT IC4
+U 1 1 62E2F540
+P 2400 4400
+F 0 "IC4" H 2950 4665 50  0000 C CNN
+F 1 "CD74HC4050MT" H 2950 4574 50  0000 C CNN
+F 2 "SamacSys_Parts:SOIC127P600X175-16N" H 3350 4500 50  0001 L CNN
+F 3 "https://www.ti.com/lit/ds/symlink/cd74hc4050.pdf?ts=1619241856113&ref_url=https%253A%252F%252Fwww.ti.com%252Fstore%252Fti%252Fen%252Fp%252Fproduct%252F%253Fp%253DCD74HC4050MT" H 3350 4400 50  0001 L CNN
+F 4 "High Speed CMOS Logic Hex Non-Inverting Buffers" H 3350 4300 50  0001 L CNN "Description"
+F 5 "1.75" H 3350 4200 50  0001 L CNN "Height"
+F 6 "595-CD74HC4050MT" H 3350 4100 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD74HC4050MT?qs=xFfolx0DHx22PhSyWcEz9w%3D%3D" H 3350 4000 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 3350 3900 50  0001 L CNN "Manufacturer_Name"
+F 9 "CD74HC4050MT" H 3350 3800 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2400 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 62E4D3B4
+P 2250 6050
+F 0 "#PWR0110" H 2250 5800 50  0001 C CNN
+F 1 "GND" H 2255 5877 50  0000 C CNN
+F 2 "" H 2250 6050 50  0001 C CNN
+F 3 "" H 2250 6050 50  0001 C CNN
+	1    2250 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 5950 3650 5950
+Text Label 2450 5850 2    50   ~ 0
+SPI_CS_SD_5.0n
+NoConn ~ 3500 4400
+Text Label 3450 5850 0    50   ~ 0
+SPI_MISO_5.0
+$Comp
+L Device:R_Small_US R2
+U 1 1 62E8474D
+P 1650 4500
+F 0 "R2" V 1445 4500 50  0000 C CNN
+F 1 "1K" V 1536 4500 50  0000 C CNN
+F 2 "SamacSys_Parts:0603WAF-UNI-ROYAL" H 1650 4500 50  0001 C CNN
+F 3 "~" H 1650 4500 50  0001 C CNN
+	1    1650 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 62E87731
+P 1300 4500
+F 0 "D1" H 1293 4245 50  0000 C CNN
+F 1 "RED" H 1293 4336 50  0000 C CNN
+F 2 "SamacSys_Parts:MHT192URCT" H 1300 4500 50  0001 C CNN
+F 3 "~" H 1300 4500 50  0001 C CNN
+	1    1300 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1450 4500 1550 4500
+Wire Wire Line
+	1150 4500 1000 4500
+$Comp
+L power:+3.3V #PWR0111
+U 1 1 62E9A300
+P 1000 4500
+F 0 "#PWR0111" H 1000 4350 50  0001 C CNN
+F 1 "+3.3V" H 1015 4673 50  0000 C CNN
+F 2 "" H 1000 4500 50  0001 C CNN
+F 3 "" H 1000 4500 50  0001 C CNN
+	1    1000 4500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3500 4700
+Text Label 2400 4500 2    50   ~ 0
+SPI_CS_SD_3.3n
+Text Label 2450 5950 2    50   ~ 0
+SPI_MISO_SD_3.3
+NoConn ~ 3500 4800
+NoConn ~ 3500 5000
+Text Label 8750 3500 2    50   ~ 0
+SPI_CS_SD_3.3n
+Text Label 2400 4700 2    50   ~ 0
+SPI_MOSI_3.3
+Text Label 2400 4600 2    50   ~ 0
+SPI_CS_SD_5.0n
+Text Label 8750 3800 2    50   ~ 0
+SPI_SCK_3.3
+Text Label 8750 3600 2    50   ~ 0
+SPI_MOSI_3.3
+Text Label 8750 4000 2    50   ~ 0
+SPI_MISO_SD_3.3
+Wire Wire Line
+	7950 3900 8750 3900
+$Comp
+L SamacSys_Parts:DM3CS-SF-MicroSD J3
+U 1 1 62F09558
+P 8500 3050
+F 0 "J3" H 9200 2950 50  0000 L CNN
+F 1 "DM3CS-SF-MicroSD" H 9200 2850 50  0000 L CNN
+F 2 "SamacSys_Parts:DM3CSSF" H 8300 3800 50  0001 L CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Hirose-HRS-DM3CS-SF_C202111.pdf" H 8300 3700 50  0001 L CNN
+F 4 "Memory Card Connectors 8P R/A SMT MICRO SD HINGE PUSH-PULL" H 8300 3600 50  0001 L CNN "Description"
+F 5 "1.83" H 8300 3500 50  0001 L CNN "Height"
+F 6 "798-DM3CSSF" H 8300 3400 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Hirose-Connector/DM3CS-SF?qs=tTj%252BmQ3KZwbB9K5zh89Rcw%3D%3D" H 8300 3300 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Hirose" H 8300 3200 50  0001 L CNN "Manufacturer_Name"
+F 9 "DM3CS-SF" H 8300 3100 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8500 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 62F30AB0
+P 2400 6900
+F 0 "#PWR0112" H 2400 6650 50  0001 C CNN
+F 1 "GND" H 2405 6727 50  0000 C CNN
+F 2 "" H 2400 6900 50  0001 C CNN
+F 3 "" H 2400 6900 50  0001 C CNN
+	1    2400 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0113
+U 1 1 62F3C891
+P 2100 6900
+F 0 "#PWR0113" H 2100 6750 50  0001 C CNN
+F 1 "+3.3V" H 2115 7073 50  0000 C CNN
+F 2 "" H 2100 6900 50  0001 C CNN
+F 3 "" H 2100 6900 50  0001 C CNN
+	1    2100 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R6
+U 1 1 62F589EA
+P 4300 7150
+F 0 "R6" V 4095 7150 50  0000 C CNN
+F 1 "4k7" V 4186 7150 50  0000 C CNN
+F 2 "SamacSys_Parts:0603WAF-UNI-ROYAL" H 4300 7150 50  0001 C CNN
+F 3 "~" H 4300 7150 50  0001 C CNN
+	1    4300 7150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 6950 4300 7050
+$Comp
+L Device:R_Small_US R7
+U 1 1 62F5CA3F
+P 4650 7150
+F 0 "R7" V 4445 7150 50  0000 C CNN
+F 1 "4k7" V 4536 7150 50  0000 C CNN
+F 2 "SamacSys_Parts:0603WAF-UNI-ROYAL" H 4650 7150 50  0001 C CNN
+F 3 "~" H 4650 7150 50  0001 C CNN
+	1    4650 7150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 6950 4650 7050
+$Comp
+L power:GND #PWR0114
+U 1 1 62F89523
+P 3600 6850
+F 0 "#PWR0114" H 3600 6600 50  0001 C CNN
+F 1 "GND" H 3605 6677 50  0000 C CNN
+F 2 "" H 3600 6850 50  0001 C CNN
+F 3 "" H 3600 6850 50  0001 C CNN
+	1    3600 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0115
+U 1 1 62F91F96
+P 3950 6900
+F 0 "#PWR0115" H 3950 6750 50  0001 C CNN
+F 1 "+5V" H 3965 7073 50  0000 C CNN
+F 2 "" H 3950 6900 50  0001 C CNN
+F 3 "" H 3950 6900 50  0001 C CNN
+	1    3950 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 6950 4300 6950
+Wire Wire Line
+	4300 6950 3950 6950
+Wire Wire Line
+	3950 6950 3950 7050
+Text Label 4750 7750 0    50   ~ 0
+I2C_SDA_5.0
+Text Label 4750 7650 0    50   ~ 0
+I2C_SCL_5.0
+Text Label 1300 7750 2    50   ~ 0
+I2C_SDA_3.3
+Text Label 1300 7650 2    50   ~ 0
+I2C_SCL_3.3
+$Comp
+L SamacSys_Parts:PCA9306DCTRG4 IC5
+U 1 1 62F2F61E
+P 2400 7450
+F 0 "IC5" H 3000 7715 50  0000 C CNN
+F 1 "PCA9306DCTRG4" H 3000 7624 50  0000 C CNN
+F 2 "SamacSys_Parts:SOP65P400X130-8N" H 3450 7550 50  0001 L CNN
+F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fpca9306" H 3450 7450 50  0001 L CNN
+F 4 "Translation - Voltage Levels Dual Bi-Dir I2C-Bus" H 3450 7350 50  0001 L CNN "Description"
+F 5 "1.3" H 3450 7250 50  0001 L CNN "Height"
+F 6 "595-PCA9306DCTRG4" H 3450 7150 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/PCA9306DCTRG4?qs=7Sb4WzetO88LX%252B4UCYZtug%3D%3D" H 3450 7050 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 3450 6950 50  0001 L CNN "Manufacturer_Name"
+F 9 "PCA9306DCTRG4" H 3450 6850 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2400 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 6303DE64
+P 1400 7400
+F 0 "R1" V 1195 7400 50  0000 C CNN
+F 1 "4k7" V 1286 7400 50  0000 C CNN
+F 2 "SamacSys_Parts:0603WAF-UNI-ROYAL" H 1400 7400 50  0001 C CNN
+F 3 "~" H 1400 7400 50  0001 C CNN
+	1    1400 7400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R3
+U 1 1 6303DE6A
+P 1750 7400
+F 0 "R3" V 1545 7400 50  0000 C CNN
+F 1 "4k7" V 1636 7400 50  0000 C CNN
+F 2 "SamacSys_Parts:0603WAF-UNI-ROYAL" H 1750 7400 50  0001 C CNN
+F 3 "~" H 1750 7400 50  0001 C CNN
+	1    1750 7400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 7300 1400 7150
+Wire Wire Line
+	1400 7150 1750 7150
+Wire Wire Line
+	1750 7300 1750 7150
+Connection ~ 1750 7150
+Wire Wire Line
+	1400 7500 1400 7650
+Wire Wire Line
+	1750 7500 1750 7750
+Wire Wire Line
+	1750 7150 2100 7150
+Wire Wire Line
+	2100 7150 2100 7550
+Wire Wire Line
+	2100 7550 2400 7550
+Wire Wire Line
+	1400 7650 2400 7650
+Wire Wire Line
+	1750 7750 2400 7750
+$Comp
+L Device:R_Small_US R5
+U 1 1 62F38C4C
+P 3950 7350
+F 0 "R5" V 3745 7350 50  0000 C CNN
+F 1 "100K" V 3836 7350 50  0000 C CNN
+F 2 "SamacSys_Parts:0603WAF-UNI-ROYAL" H 3950 7350 50  0001 C CNN
+F 3 "~" H 3950 7350 50  0001 C CNN
+	1    3950 7350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 6900 2100 7150
+Connection ~ 2100 7150
+Wire Wire Line
+	2400 6900 2400 7450
+$Comp
+L power:GND #PWR0116
+U 1 1 6314CBD1
+P 2950 2600
+F 0 "#PWR0116" H 2950 2350 50  0001 C CNN
+F 1 "GND" H 2955 2427 50  0000 C CNN
+F 2 "" H 2950 2600 50  0001 C CNN
+F 3 "" H 2950 2600 50  0001 C CNN
+	1    2950 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0117
+U 1 1 631525D6
+P 3700 2800
+F 0 "#PWR0117" H 3700 2650 50  0001 C CNN
+F 1 "+3.3V" H 3715 2973 50  0000 C CNN
+F 2 "" H 3700 2800 50  0001 C CNN
+F 3 "" H 3700 2800 50  0001 C CNN
+	1    3700 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:BMP390 IC2
+U 1 1 631660AB
+P 1500 2300
+F 0 "IC2" H 2350 2165 50  0000 C CNN
+F 1 "BMP390" H 2350 2074 50  0000 C CNN
+F 2 "SamacSys_Parts:BMP390" H 1575 3100 50  0001 L CNN
+F 3 "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp390-ds002.pdf" H 1575 3000 50  0001 L CNN
+F 4 "Board Mount Pressure Sensors" H 1575 2900 50  0001 L CNN "Description"
+F 5 "0.8" H 1575 2800 50  0001 L CNN "Height"
+F 6 "262-BMP390" H 1575 2700 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Bosch-Sensortec/BMP390?qs=QNEnbhJQKvYQVfvRMgo2YA%3D%3D" H 1575 2600 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Bosch Sensortec" H 1575 2500 50  0001 L CNN "Manufacturer_Name"
+F 9 "BMP390" H 1575 2400 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1500 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 6318F565
+P 2950 3200
+F 0 "#PWR0118" H 2950 2950 50  0001 C CNN
+F 1 "GND" H 2955 3027 50  0000 C CNN
+F 2 "" H 2950 3200 50  0001 C CNN
+F 3 "" H 2950 3200 50  0001 C CNN
+	1    2950 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3100 2950 3200
+Wire Wire Line
+	2950 2700 2950 2600
+Wire Wire Line
+	2950 3000 2950 3100
+Connection ~ 2950 3100
+Wire Wire Line
+	2950 2800 3050 2800
+Wire Wire Line
+	3050 2800 3050 2900
+Wire Wire Line
+	3050 2900 2950 2900
+$Comp
+L Device:C_Small C3
+U 1 1 631D7093
+P 3250 3100
+F 0 "C3" V 3021 3100 50  0000 C CNN
+F 1 "100nF" V 3112 3100 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 3250 3100 50  0001 C CNN
+F 3 "~" H 3250 3100 50  0001 C CNN
+	1    3250 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 631E9C38
+P 3250 2700
+F 0 "C2" V 3021 2700 50  0000 C CNN
+F 1 "100nF" V 3112 2700 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 3250 2700 50  0001 C CNN
+F 3 "~" H 3250 2700 50  0001 C CNN
+	1    3250 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2950 2600 3250 2600
+Wire Wire Line
+	2950 3200 3250 3200
+Connection ~ 2950 3200
+Wire Wire Line
+	3250 3000 3250 2900
+Wire Wire Line
+	3050 2900 3250 2900
+Connection ~ 3050 2900
+Connection ~ 3250 2900
+Wire Wire Line
+	3250 2900 3250 2800
+Wire Wire Line
+	3700 2900 3700 2800
+Wire Wire Line
+	3250 2900 3700 2900
+Connection ~ 2950 2600
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 63248A8A
+P 1500 3100
+F 0 "JP1" H 1500 3305 50  0000 C CNN
+F 1 "ALT_INT" H 1500 3214 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1500 3100 50  0001 C CNN
+F 3 "~" H 1500 3100 50  0001 C CNN
+	1    1500 3100
+	-1   0    0    1   
+$EndComp
+Text Label 1250 3100 2    50   ~ 0
+PC3-ALT-INT
+Wire Wire Line
+	1750 3100 1650 3100
+Wire Wire Line
+	1250 3100 1350 3100
+$Comp
+L power:+3.3V #PWR0119
+U 1 1 63246BC6
+P 1750 3000
+F 0 "#PWR0119" H 1750 2850 50  0001 C CNN
+F 1 "+3.3V" V 1765 3128 50  0000 L CNN
+F 2 "" H 1750 3000 50  0001 C CNN
+F 3 "" H 1750 3000 50  0001 C CNN
+	1    1750 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 63245AAD
+P 1750 2900
+F 0 "#PWR0120" H 1750 2650 50  0001 C CNN
+F 1 "GND" V 1755 2772 50  0000 R CNN
+F 2 "" H 1750 2900 50  0001 C CNN
+F 3 "" H 1750 2900 50  0001 C CNN
+	1    1750 2900
+	0    1    1    0   
+$EndComp
+Text Label 1750 2700 2    50   ~ 0
+I2C_SCL_3.3
+Text Label 1750 2800 2    50   ~ 0
+I2C_SDA_3.3
+Text Label 1650 1000 2    50   ~ 0
+I2C_SCL_3.3
+Text Label 1650 1100 2    50   ~ 0
+I2C_SDA_3.3
+Wire Wire Line
+	1650 1900 1550 1900
+Wire Wire Line
+	1550 1900 1550 2000
+Wire Wire Line
+	3050 1900 3150 1900
+Wire Wire Line
+	3150 1900 3150 2000
+Wire Wire Line
+	3050 1800 3150 1800
+Wire Wire Line
+	3150 1800 3150 1900
+Connection ~ 3150 1900
+$Comp
+L power:GND #PWR0121
+U 1 1 63340123
+P 1550 2000
+F 0 "#PWR0121" H 1550 1750 50  0001 C CNN
+F 1 "GND" H 1555 1827 50  0000 C CNN
+F 2 "" H 1550 2000 50  0001 C CNN
+F 3 "" H 1550 2000 50  0001 C CNN
+	1    1550 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 63347911
+P 3150 2000
+F 0 "#PWR0122" H 3150 1750 50  0001 C CNN
+F 1 "GND" H 3155 1827 50  0000 C CNN
+F 2 "" H 3150 2000 50  0001 C CNN
+F 3 "" H 3150 2000 50  0001 C CNN
+	1    3150 2000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1650 1500
+$Comp
+L power:+3.3V #PWR0123
+U 1 1 633A125A
+P 3400 1450
+F 0 "#PWR0123" H 3400 1300 50  0001 C CNN
+F 1 "+3.3V" H 3415 1623 50  0000 C CNN
+F 2 "" H 3400 1450 50  0001 C CNN
+F 3 "" H 3400 1450 50  0001 C CNN
+	1    3400 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 633A9C4E
+P 3400 1700
+F 0 "C4" V 3171 1700 50  0000 C CNN
+F 1 "100nF" V 3262 1700 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 3400 1700 50  0001 C CNN
+F 3 "~" H 3400 1700 50  0001 C CNN
+	1    3400 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0124
+U 1 1 633B213D
+P 3400 2000
+F 0 "#PWR0124" H 3400 1750 50  0001 C CNN
+F 1 "GND" H 3405 1827 50  0000 C CNN
+F 2 "" H 3400 2000 50  0001 C CNN
+F 3 "" H 3400 2000 50  0001 C CNN
+	1    3400 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1800 3400 2000
+Text Label 3050 1200 0    50   ~ 0
+PC4-GYRO-INT3
+Text Label 3050 1000 0    50   ~ 0
+PC5-ACCEL-INT1
+Wire Wire Line
+	1650 1300 1550 1300
+Wire Wire Line
+	1650 1200 1550 1200
+Wire Wire Line
+	1550 1200 1550 1300
+Wire Wire Line
+	1550 1200 1450 1200
+$Comp
+L power:GND #PWR0125
+U 1 1 6341AE7B
+P 1450 1200
+F 0 "#PWR0125" H 1450 950 50  0001 C CNN
+F 1 "GND" V 1455 1072 50  0000 R CNN
+F 2 "" H 1450 1200 50  0001 C CNN
+F 3 "" H 1450 1200 50  0001 C CNN
+	1    1450 1200
+	0    1    1    0   
+$EndComp
+NoConn ~ 3050 1300
+NoConn ~ 3050 1100
+$Comp
+L SamacSys_Parts:MCP47CVB22-E_UN IC7
+U 1 1 63461957
+P 5400 4200
+F 0 "IC7" H 6100 4465 50  0000 C CNN
+F 1 "MCP47CVB22-E_UN" H 6100 4374 50  0000 C CNN
+F 2 "SamacSys_Parts:SOP50P490X110-10N" H 6650 4300 50  0001 L CNN
+F 3 "https://datasheet.datasheetarchive.com/originals/distributors/DKDS41/DSANUWW0026764.pdf" H 6650 4200 50  0001 L CNN
+F 4 "Digital to Analog Converters - DAC I2C, Dual Channel, 12-Bit, Volatile" H 6650 4100 50  0001 L CNN "Description"
+F 5 "1.1" H 6650 4000 50  0001 L CNN "Height"
+F 6 "579-MCP47CVB22-E/UN" H 6650 3900 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP47CVB22-E-UN?qs=byeeYqUIh0PPQDcqck%252Boaw%3D%3D" H 6650 3800 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Microchip" H 6650 3700 50  0001 L CNN "Manufacturer_Name"
+F 9 "MCP47CVB22-E/UN" H 6650 3600 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5400 4200
+	1    0    0    -1  
+$EndComp
+Text Label 6800 4200 0    50   ~ 0
+I2C_SDA_5.0
+Text Label 6800 4300 0    50   ~ 0
+I2C_SCL_5.0
+$Comp
+L power:GND #PWR0126
+U 1 1 634913B7
+P 7000 4400
+F 0 "#PWR0126" H 7000 4150 50  0001 C CNN
+F 1 "GND" V 7005 4272 50  0000 R CNN
+F 2 "" H 7000 4400 50  0001 C CNN
+F 3 "" H 7000 4400 50  0001 C CNN
+	1    7000 4400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6800 4400 6900 4400
+Wire Wire Line
+	6900 4500 6900 4400
+Wire Wire Line
+	6900 4500 6800 4500
+Wire Wire Line
+	6900 4400 7000 4400
+Connection ~ 6900 4400
+$Comp
+L power:GND #PWR0128
+U 1 1 6350C98F
+P 10000 1200
+F 0 "#PWR0128" H 10000 950 50  0001 C CNN
+F 1 "GND" H 10005 1027 50  0000 C CNN
+F 2 "" H 10000 1200 50  0001 C CNN
+F 3 "" H 10000 1200 50  0001 C CNN
+	1    10000 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1200 10000 1100
+Wire Wire Line
+	10000 1100 9900 1100
+$Comp
+L power:+5V #PWR0129
+U 1 1 6353E109
+P 5500 3600
+F 0 "#PWR0129" H 5500 3450 50  0001 C CNN
+F 1 "+5V" H 5515 3773 50  0000 C CNN
+F 2 "" H 5500 3600 50  0001 C CNN
+F 3 "" H 5500 3600 50  0001 C CNN
+	1    5500 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0130
+U 1 1 6360917D
+P 4800 3600
+F 0 "#PWR0130" H 4800 3350 50  0001 C CNN
+F 1 "GND" H 4805 3427 50  0000 C CNN
+F 2 "" H 4800 3600 50  0001 C CNN
+F 3 "" H 4800 3600 50  0001 C CNN
+	1    4800 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 6362808C
+P 5150 4000
+F 0 "C8" V 4921 4000 50  0000 C CNN
+F 1 "100nF" V 5012 4000 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 5150 4000 50  0001 C CNN
+F 3 "~" H 5150 4000 50  0001 C CNN
+	1    5150 4000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4850 4300 4900 4300
+Wire Wire Line
+	4850 4400 5400 4400
+Wire Wire Line
+	4850 4500 5400 4500
+Wire Wire Line
+	4850 4600 5400 4600
+Wire Wire Line
+	4900 4000 4900 4300
+Wire Wire Line
+	5400 4000 5400 4200
+Wire Wire Line
+	4800 3600 4900 3600
+Wire Wire Line
+	5400 3600 5500 3600
+$Comp
+L Device:R_Small_US R8
+U 1 1 637A2DDB
+P 7000 4600
+F 0 "R8" V 6795 4600 50  0000 C CNN
+F 1 "100k" V 6886 4600 50  0000 C CNN
+F 2 "SamacSys_Parts:0603WAF-UNI-ROYAL" H 7000 4600 50  0001 C CNN
+F 3 "~" H 7000 4600 50  0001 C CNN
+	1    7000 4600
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0131
+U 1 1 637C500E
+P 7200 4700
+F 0 "#PWR0131" H 7200 4450 50  0001 C CNN
+F 1 "GND" H 7205 4527 50  0000 C CNN
+F 2 "" H 7200 4700 50  0001 C CNN
+F 3 "" H 7200 4700 50  0001 C CNN
+	1    7200 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J2
+U 1 1 63800705
+P 4650 4500
+F 0 "J2" H 4568 4075 50  0000 C CNN
+F 1 "DAC" H 4568 4166 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 4650 4500 50  0001 C CNN
+F 3 "~" H 4650 4500 50  0001 C CNN
+	1    4650 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4850 4700 5400 4700
+Wire Wire Line
+	5400 4700 5400 4800
+Wire Wire Line
+	5400 4800 6800 4800
+Wire Wire Line
+	6800 4600 6800 4800
+Wire Wire Line
+	7100 4600 7200 4600
+Wire Wire Line
+	7200 4600 7200 4700
+Wire Wire Line
+	6900 4600 6800 4600
+Connection ~ 6800 4600
+Connection ~ 5050 1000
+$Comp
+L power:+5V #PWR0132
+U 1 1 638B3164
+P 4550 1000
+F 0 "#PWR0132" H 4550 850 50  0001 C CNN
+F 1 "+5V" H 4565 1173 50  0000 C CNN
+F 2 "" H 4550 1000 50  0001 C CNN
+F 3 "" H 4550 1000 50  0001 C CNN
+	1    4550 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0133
+U 1 1 638B316A
+P 5150 1000
+F 0 "#PWR0133" H 5150 750 50  0001 C CNN
+F 1 "GND" H 5155 827 50  0000 C CNN
+F 2 "" H 5150 1000 50  0001 C CNN
+F 3 "" H 5150 1000 50  0001 C CNN
+	1    5150 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0134
+U 1 1 62F1A2FB
+P 6950 6100
+F 0 "#PWR0134" H 6950 5850 50  0001 C CNN
+F 1 "GND" H 6955 5927 50  0000 C CNN
+F 2 "" H 6950 6100 50  0001 C CNN
+F 3 "" H 6950 6100 50  0001 C CNN
+	1    6950 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 6000 6950 6000
+Wire Wire Line
+	6950 6000 6950 6100
+Wire Wire Line
+	5850 6000 5750 6000
+Wire Wire Line
+	5850 6100 5750 6100
+$Comp
+L power:+5V #PWR0135
+U 1 1 62F4B42D
+P 5750 5700
+F 0 "#PWR0135" H 5750 5550 50  0001 C CNN
+F 1 "+5V" H 5765 5873 50  0000 C CNN
+F 2 "" H 5750 5700 50  0001 C CNN
+F 3 "" H 5750 5700 50  0001 C CNN
+	1    5750 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 62F64F84
+P 5550 5800
+F 0 "C10" V 5321 5800 50  0000 C CNN
+F 1 "100nF" V 5412 5800 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 5550 5800 50  0001 C CNN
+F 3 "~" H 5550 5800 50  0001 C CNN
+	1    5550 5800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0136
+U 1 1 62F57CB7
+P 5900 6400
+F 0 "#PWR0136" H 5900 6250 50  0001 C CNN
+F 1 "+3.3V" H 5915 6573 50  0000 C CNN
+F 2 "" H 5900 6400 50  0001 C CNN
+F 3 "" H 5900 6400 50  0001 C CNN
+	1    5900 6400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:TLV2217-33KVURG3 IC8
+U 1 1 62F188BC
+P 5850 6000
+F 0 "IC8" H 6350 6265 50  0000 C CNN
+F 1 "TLV2217-33KVURG3" H 6350 6174 50  0000 C CNN
+F 2 "SamacSys_Parts:KVU0003A" H 6700 6100 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/tlv2217" H 6700 6000 50  0001 L CNN
+F 4 "Low-Dropout Fixed-Voltage Regulators" H 6700 5900 50  0001 L CNN "Description"
+F 5 "" H 6700 5800 50  0001 L CNN "Height"
+F 6 "595-TLV2217-33KVURG3" H 6700 5700 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TLV2217-33KVURG3?qs=JbBXx2IvYcc78hp26ssbXA%3D%3D" H 6700 5600 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 6700 5500 50  0001 L CNN "Manufacturer_Name"
+F 9 "TLV2217-33KVURG3" H 6700 5400 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5850 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 5800 5750 5800
+Wire Wire Line
+	5750 6400 5900 6400
+Wire Wire Line
+	5450 5800 5350 5800
+Wire Wire Line
+	5250 6300 5150 6300
+Wire Wire Line
+	5350 5800 5350 5900
+Wire Wire Line
+	5150 6300 5150 6400
+$Comp
+L power:GND #PWR0137
+U 1 1 63059283
+P 5150 6400
+F 0 "#PWR0137" H 5150 6150 50  0001 C CNN
+F 1 "GND" H 5155 6227 50  0000 C CNN
+F 2 "" H 5150 6400 50  0001 C CNN
+F 3 "" H 5150 6400 50  0001 C CNN
+	1    5150 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0138
+U 1 1 630664BD
+P 5350 5900
+F 0 "#PWR0138" H 5350 5650 50  0001 C CNN
+F 1 "GND" H 5355 5727 50  0000 C CNN
+F 2 "" H 5350 5900 50  0001 C CNN
+F 3 "" H 5350 5900 50  0001 C CNN
+	1    5350 5900
+	1    0    0    -1  
+$EndComp
+Connection ~ 5750 5800
+Wire Wire Line
+	5750 5800 5750 6000
+Wire Wire Line
+	5750 5700 5750 5800
+Wire Wire Line
+	8750 4900 8250 4900
+Wire Wire Line
+	8750 5300 8550 5300
+Wire Wire Line
+	8750 5200 8750 5300
+$Comp
+L Device:R_Small_US R9
+U 1 1 6313FC61
+P 8750 5100
+F 0 "R9" H 8818 5146 50  0000 L CNN
+F 1 "100k" H 8818 5055 50  0000 L CNN
+F 2 "SamacSys_Parts:0603WAF-UNI-ROYAL" H 8750 5100 50  0001 C CNN
+F 3 "~" H 8750 5100 50  0001 C CNN
+	1    8750 5100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:FDN340P Q1
+U 1 1 6309D8FC
+P 8550 5300
+F 0 "Q1" H 8980 5446 50  0000 L CNN
+F 1 "FDN340P" H 8980 5355 50  0000 L CNN
+F 2 "SamacSys_Parts:SOT95P237X112-3N" H 9000 5250 50  0001 L CNN
+F 3 "https://www.onsemi.com/pub/Collateral/FDN340P-D.PDF" H 9000 5150 50  0001 L CNN
+F 4 "Trans MOSFET P-CH 20V 2A 3-Pin SuperSOT" H 9000 5050 50  0001 L CNN "Description"
+F 5 "1.12" H 9000 4950 50  0001 L CNN "Height"
+F 6 "512-FDN340P" H 9000 4850 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/ON-Semiconductor-Fairchild/FDN340P?qs=AMp2PTjoga9dhzFXRaqTZw%3D%3D" H 9000 4750 50  0001 L CNN "Mouser Price/Stock"
+F 8 "onsemi" H 9000 4650 50  0001 L CNN "Manufacturer_Name"
+F 9 "FDN340P" H 9000 4550 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8550 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0139
+U 1 1 62DEFA29
+P 8750 4800
+F 0 "#PWR0139" H 8750 4650 50  0001 C CNN
+F 1 "+3.3V" H 8765 4973 50  0000 C CNN
+F 2 "" H 8750 4800 50  0001 C CNN
+F 3 "" H 8750 4800 50  0001 C CNN
+	1    8750 4800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 4850 9150 5300
+Wire Wire Line
+	8750 5300 9150 5300
+Connection ~ 8750 5300
+Wire Wire Line
+	8250 5700 8250 5800
+Wire Wire Line
+	8250 5800 8450 5800
+Text Label 8350 6000 0    50   ~ 0
+SD-POWER
+Text Label 8750 3700 2    50   ~ 0
+SD-POWER
+Wire Wire Line
+	8250 5800 8250 6000
+Wire Wire Line
+	8250 6000 8350 6000
+Connection ~ 8250 5800
+Wire Wire Line
+	8950 5800 9200 5800
+Wire Wire Line
+	9200 5800 9200 5850
+$Comp
+L power:GND #PWR0140
+U 1 1 63292087
+P 9200 5850
+F 0 "#PWR0140" H 9200 5600 50  0001 C CNN
+F 1 "GND" H 9205 5677 50  0000 C CNN
+F 2 "" H 9200 5850 50  0001 C CNN
+F 3 "" H 9200 5850 50  0001 C CNN
+	1    9200 5850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3500 4500
+Wire Wire Line
+	2250 6050 2450 6050
+Wire Wire Line
+	2200 5100 2400 5100
+$Comp
+L SamacSys_Parts:BMI088 IC3
+U 1 1 6338C59E
+P 1650 1400
+F 0 "IC3" H 2350 2065 50  0000 C CNN
+F 1 "BMI088" H 2350 1974 50  0000 C CNN
+F 2 "SamacSys_Parts:BMI088" H 3550 2300 50  0001 L CNN
+F 3 "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets_SAMA/994c3bf88e91a9e9fead6a819d348e4d.pdf" H 3550 2200 50  0001 L CNN
+F 4 "Inertial Measurement Unit Digital Output 2.5V/3.3V Automotive" H 3550 2100 50  0001 L CNN "Description"
+F 5 "1.45" H 3550 2000 50  0001 L CNN "Height"
+F 6 "262-BMI088" H 3550 1900 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Bosch-Sensortec/BMI088?qs=f9yNj16SXrIMFspTV6RB6Q%3D%3D" H 3550 1800 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Bosch Sensortec" H 3550 1700 50  0001 L CNN "Manufacturer_Name"
+F 9 "BMI088" H 3550 1600 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1650 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0141
+U 1 1 6335F344
+P 950 1300
+F 0 "#PWR0141" H 950 1150 50  0001 C CNN
+F 1 "+3.3V" H 965 1473 50  0000 C CNN
+F 2 "" H 950 1300 50  0001 C CNN
+F 3 "" H 950 1300 50  0001 C CNN
+	1    950  1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 633EC60C
+P 3750 1700
+F 0 "C6" V 3521 1700 50  0000 C CNN
+F 1 "100nF" V 3612 1700 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 3750 1700 50  0001 C CNN
+F 3 "~" H 3750 1700 50  0001 C CNN
+	1    3750 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0142
+U 1 1 633EC612
+P 3750 2000
+F 0 "#PWR0142" H 3750 1750 50  0001 C CNN
+F 1 "GND" H 3755 1827 50  0000 C CNN
+F 2 "" H 3750 2000 50  0001 C CNN
+F 3 "" H 3750 2000 50  0001 C CNN
+	1    3750 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 1800 3750 2000
+Wire Wire Line
+	3400 1450 3400 1500
+Wire Wire Line
+	3050 1500 3400 1500
+Wire Wire Line
+	3050 1600 3400 1600
+Connection ~ 3400 1500
+Wire Wire Line
+	3400 1500 3400 1600
+Connection ~ 3400 1600
+Wire Wire Line
+	3750 1600 3750 1500
+Wire Wire Line
+	3400 1500 3750 1500
+Wire Wire Line
+	1300 7650 1400 7650
+Connection ~ 1400 7650
+Wire Wire Line
+	1300 7750 1750 7750
+Connection ~ 1750 7750
+Connection ~ 1550 1200
+Wire Wire Line
+	1750 4500 2400 4500
+Wire Wire Line
+	950  1300 950  1400
+Wire Wire Line
+	1650 1400 950  1400
+Connection ~ 950  1400
+Wire Wire Line
+	950  1400 950  1700
+Wire Wire Line
+	1650 1700 950  1700
+Wire Wire Line
+	8750 4900 8750 5000
+Wire Wire Line
+	8750 4900 8750 4800
+Connection ~ 8750 4900
+Wire Wire Line
+	8250 4900 8250 5100
+Wire Wire Line
+	3500 4600 3700 4600
+$Comp
+L power:GND #PWR0143
+U 1 1 6363283D
+P 3700 4600
+F 0 "#PWR0143" H 3700 4350 50  0001 C CNN
+F 1 "GND" H 3705 4427 50  0000 C CNN
+F 2 "" H 3700 4600 50  0001 C CNN
+F 3 "" H 3700 4600 50  0001 C CNN
+	1    3700 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0144
+U 1 1 63673B4D
+P 3800 4900
+F 0 "#PWR0144" H 3800 4650 50  0001 C CNN
+F 1 "GND" H 3805 4727 50  0000 C CNN
+F 2 "" H 3800 4900 50  0001 C CNN
+F 3 "" H 3800 4900 50  0001 C CNN
+	1    3800 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 5100 3700 5100
+$Comp
+L power:GND #PWR0145
+U 1 1 63680C51
+P 3700 5100
+F 0 "#PWR0145" H 3700 4850 50  0001 C CNN
+F 1 "GND" H 3705 4927 50  0000 C CNN
+F 2 "" H 3700 5100 50  0001 C CNN
+F 3 "" H 3700 5100 50  0001 C CNN
+	1    3700 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4900 3800 4900
+$Comp
+L power:+5V #PWR0146
+U 1 1 636E523E
+P 3650 5950
+F 0 "#PWR0146" H 3650 5800 50  0001 C CNN
+F 1 "+5V" H 3665 6123 50  0000 C CNN
+F 2 "" H 3650 5950 50  0001 C CNN
+F 3 "" H 3650 5950 50  0001 C CNN
+	1    3650 5950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small_US R4
+U 1 1 636F394B
+P 3950 7150
+F 0 "R4" V 3745 7150 50  0000 C CNN
+F 1 "100K" V 3836 7150 50  0000 C CNN
+F 2 "SamacSys_Parts:0603WAF-UNI-ROYAL" H 3950 7150 50  0001 C CNN
+F 3 "~" H 3950 7150 50  0001 C CNN
+	1    3950 7150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 6900 3950 6950
+Connection ~ 3950 6950
+Connection ~ 4300 6950
+Wire Wire Line
+	4300 7250 4300 7650
+Connection ~ 4300 7650
+Wire Wire Line
+	4300 7650 4750 7650
+Wire Wire Line
+	4650 7250 4650 7750
+Connection ~ 4650 7750
+Wire Wire Line
+	4650 7750 4750 7750
+Wire Wire Line
+	3600 7450 3700 7450
+Connection ~ 3600 7450
+Wire Wire Line
+	3600 7650 4300 7650
+Wire Wire Line
+	3600 7750 4650 7750
+Wire Wire Line
+	3600 7350 3600 7450
+Wire Wire Line
+	3600 7550 3700 7550
+Wire Wire Line
+	3700 7550 3700 7450
+Connection ~ 3700 7450
+Wire Wire Line
+	3700 7450 3950 7450
+$Comp
+L SamacSys_Parts:TAJA106K010RNJ C12
+U 1 1 63868260
+P 8450 5800
+F 0 "C12" H 8700 6067 50  0000 C CNN
+F 1 "10uF" H 8700 5976 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPPM3216X180N" H 8800 5850 50  0001 L CNN
+F 3 "" H 8800 5750 50  0001 L CNN
+F 4 "AVX +/-10% 10F 10 V dc SMD Tantalum Electrolytic Capacitor, 3216-18 ESR 3 +125C" H 8800 5650 50  0001 L CNN "Description"
+F 5 "1.8" H 8800 5550 50  0001 L CNN "Height"
+F 6 "581-TAJA106K010" H 8800 5450 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/AVX/TAJA106K010RNJ?qs=OVpPYgiJXXXdYDvaS2xyLQ%3D%3D" H 8800 5350 50  0001 L CNN "Mouser Price/Stock"
+F 8 "AVX" H 8800 5250 50  0001 L CNN "Manufacturer_Name"
+F 9 "TAJA106K010RNJ" H 8800 5150 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8450 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:TAJA106K010RNJ C9
+U 1 1 63893310
+P 5400 3600
+F 0 "C9" H 5650 3867 50  0000 C CNN
+F 1 "10uF" H 5650 3776 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPPM3216X180N" H 5750 3650 50  0001 L CNN
+F 3 "" H 5750 3550 50  0001 L CNN
+F 4 "AVX +/-10% 10F 10 V dc SMD Tantalum Electrolytic Capacitor, 3216-18 ESR 3 +125C" H 5750 3450 50  0001 L CNN "Description"
+F 5 "1.8" H 5750 3350 50  0001 L CNN "Height"
+F 6 "581-TAJA106K010" H 5750 3250 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/AVX/TAJA106K010RNJ?qs=OVpPYgiJXXXdYDvaS2xyLQ%3D%3D" H 5750 3150 50  0001 L CNN "Mouser Price/Stock"
+F 8 "AVX" H 5750 3050 50  0001 L CNN "Manufacturer_Name"
+F 9 "TAJA106K010RNJ" H 5750 2950 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5400 3600
+	-1   0    0    1   
+$EndComp
+Connection ~ 4900 4300
+Wire Wire Line
+	4900 4300 5400 4300
+Connection ~ 4900 3600
+Connection ~ 5400 3600
+Wire Wire Line
+	4900 3600 4900 4000
+Connection ~ 4900 4000
+Wire Wire Line
+	5400 3600 5400 4000
+Wire Wire Line
+	4900 4000 5050 4000
+Connection ~ 5400 4000
+$Comp
+L SamacSys_Parts:TR3A226K010C1000 C11
+U 1 1 6392A212
+P 5750 6300
+F 0 "C11" H 6000 6567 50  0000 C CNN
+F 1 "22uF" H 6000 6476 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPPM3216X180N" H 6100 6350 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/TR3A226K010C1000.pdf" H 6100 6250 50  0001 L CNN
+F 4 "Solid Tantalum Surface Mount Chip Capacitors TANTAMOUNT(TM), Molded Case, Low ESR" H 6100 6150 50  0001 L CNN "Description"
+F 5 "1.8" H 6100 6050 50  0001 L CNN "Height"
+F 6 "74-TR3A226K010C1000" H 6100 5950 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=74-TR3A226K010C1000" H 6100 5850 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Vishay" H 6100 5750 50  0001 L CNN "Manufacturer_Name"
+F 9 "TR3A226K010C1000" H 6100 5650 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5750 6300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5250 4000 5400 4000
+Wire Wire Line
+	5750 6100 5750 6300
+Connection ~ 5750 6300
+Wire Wire Line
+	5750 6300 5750 6400
+$Comp
+L SamacSys_Parts:06035A101JAT2A C5
+U 1 1 6398A78B
+P 3600 7350
+F 0 "C5" H 3850 7615 50  0000 C CNN
+F 1 "100pF" H 3850 7524 50  0000 C CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 3950 7400 50  0001 L CNN
+F 3 "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-AE/DSA3AE0000492.pdf" H 3950 7300 50  0001 L CNN
+F 4 "0603 C0G ceramic capacitor,100pF 50V AVX 0603 Standard 100pF Ceramic Multilayer Capacitor, 50 V dc C0G Dielectric +/-5% SMD" H 3950 7200 50  0001 L CNN "Description"
+F 5 "0.9" H 3950 7100 50  0001 L CNN "Height"
+F 6 "581-06035A101J" H 3950 7000 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/AVX/06035A101JAT2A?qs=AGOxcRBkg6ZhFRbhUzfJ7A%3D%3D" H 3950 6900 50  0001 L CNN "Mouser Price/Stock"
+F 8 "AVX" H 3950 6800 50  0001 L CNN "Manufacturer_Name"
+F 9 "06035A101JAT2A" H 3950 6700 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3600 7350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L SamacSys_Parts:CAHCT1G125QDCKRQ1 IC6
+U 1 1 63A96601
+P 2450 5850
+F 0 "IC6" H 2950 6115 50  0000 C CNN
+F 1 "CAHCT1G125QDCKRQ1" H 2950 6024 50  0000 C CNN
+F 2 "SamacSys_Parts:SOT65P210X110-5N" H 3300 5950 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ahct1g125-q1" H 3300 5850 50  0001 L CNN
+F 4 "Automotive Catalog Single Bus Buffer Gate With 3-State Output" H 3300 5750 50  0001 L CNN "Description"
+F 5 "1.1" H 3300 5650 50  0001 L CNN "Height"
+F 6 "595-CAHCT1G125QDCKRQ" H 3300 5550 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CAHCT1G125QDCKRQ1?qs=AsTZqt%2FmeqkIDDPRtvUvpA%3D%3D" H 3300 5450 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 3300 5350 50  0001 L CNN "Manufacturer_Name"
+F 9 "CAHCT1G125QDCKRQ1" H 3300 5250 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2450 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 6301436E
+P 10000 1600
+F 0 "J6" H 10080 1592 50  0000 L CNN
+F 1 "I2C" H 10080 1501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10000 1600 50  0001 C CNN
+F 3 "~" H 10000 1600 50  0001 C CNN
+	1    10000 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J8
+U 1 1 63014B9B
+P 10000 1900
+F 0 "J8" H 10080 1892 50  0000 L CNN
+F 1 "SPI" H 10080 1801 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 10000 1900 50  0001 C CNN
+F 3 "~" H 10000 1900 50  0001 C CNN
+	1    10000 1900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9900 900 
+Text Label 7000 1600 0    50   ~ 0
+PC4-GYRO-INT3
+Text Label 7000 1700 0    50   ~ 0
+PC5-ACCEL-INT1
+Text Label 8550 2100 2    50   ~ 0
+PC5-ACCEL-INT1
+Text Label 8550 2000 2    50   ~ 0
+PC4-GYRO-INT3
+$EndSCHEMATC
